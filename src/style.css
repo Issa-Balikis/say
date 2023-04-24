@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito:ital,wght@1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+    position: sticky;
+    width: 100%;
+    height: 70px;
+    background: firebrick;
+   display: flex;
+   justify-content: space-around;
+   padding: 20px;
+   box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav--h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 15px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: rgb(255, 160, 160);
+    transition: .3s;
+}
+
+li a:active {
+    color: red;
+}
+
+.btn {
+   color: black;
+   display: none;
+}
+
+@media (max-width: 768px) {
+    
+    .navlinks {
+        display: none;
+    }
+
+    .nav--h1 {
+        text-align: center;
+    }
+
+    .navlinks-sidebar {
+        position: absolute;
+        display: block;
+        background-color: rgba(178, 34, 34, 0.918);
+        left: 70px;
+        top: 72px;
+        width: 90%;
+        transition: 0.5s;
+        z-index: 5;
+    }
+
+    .navlinks-sidebar {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    ul li {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #000;
+        padding: 10px;
+    }
+
+    ul li:last-child {
+        border-bottom: none;
+    }
+    li a {
+        font-weight: bold;
+    }
+
+    .btn {
+        display: block;
+        position: absolute;
+        right: 30px;
+        color: black;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    li a:hover {
+        color: beige;
+        transition: .3s;
+    }
+}
+
+/* HOME */
+
+.home {
+    background-image: url(../public/images/some.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.left {
+    color: white;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ h1{
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+span {
+    color: rgb(224, 66, 66);
+}
+
+.social-icons {
+    padding: 10px 0;
+}
+
+ .ig, 
+ .twitter, 
+ .fb,
+ .gh{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 40px;
+    border-radius: 50%;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.ig:hover,
+.twitter:hover,
+.fb:hover,
+.gh:hover {
+    color: beige;
+}
+
+.fb {
+    color: #4267b2;
+    border: 1px solid #4267b2;
+}
+
+.twitter {
+    color: rgb(70, 70, 223);
+}
+
+.ig {
+    color: orange;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 25px;
+    padding: 20px 0;
+}
+
+.btnn {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.btnn button {
+    background: firebrick;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ABOUT */
+
+.container {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    height: 100vh;
+  
+}
+
+.about--title h1{
+    font-family: cursive;
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+.about--img img{
+    width: 350px;
+}
+
+.flex {
+    display: flex;
+}
+
+.right {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.abt--p p{
+    margin: 20px;
+    line-height: 30px;
+}
+
+.btn--cv {
+    margin: 20px;
+}
+
+.sub-title {
+    background-color: black;
+    color: white;
+}
+
+.sub-title h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.branding {
+    background: #000;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    gap: 50px;
+} 
+
+.title--h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: firebrick;
+}
+
+.desc {
+    color: wheat;
+}
+
+
+/* PORTFOLIO */
+.porfolio {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.porfolio h1 {
+    color: black;
+    font-size: 2rem;
+    font-family: cursive;
+    padding: 20px;
+}
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 20px;
+    align-items: center;
+    gap: 30px;
+}
+
+.work img {
+    width: 600px;
+    height: 500px;
+}
+
+/* .work .text {
+    background-color: white;
+    width: 70%;
+    box-shadow: 0 5px 20px 0 rgba(0 0 0 /6%);
+    padding: 30px;
+    margin: 20px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 1;
+} */
+.workdetails {
+    position: relative;
+    height: 550px;
+    color: white;
+}
+
+.work .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    pad: 50px;
+    position: absolute;
+    top: 25%;
+    width: 80%;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+.work .workdetails:hover .text {
+    position: absolute;
+    content: "";
+    text-align: center;
+    left: 40px;
+    opacity: 1;
+    transition: 2s;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.work .workdetails::after {
+    width: 600px;
+    height: 500px;
+}
+
+.work .workdetails:hover::after {
+    opacity: 1;
+}
+
+.text h4 {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+/* SKILLS */
+
+.skills {
+    padding: 30px 30px;
+    background: black;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h3 {
+    font-size: 20px;
+    color: firebrick;
+    padding: 20px;
+}
+
+.heading h2 {
+    color: wheat;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.progress {
+    background-color: #d5d5d5;
+    border-radius: 20px;
+    position: relative;
+    margin: 45px 0;
+    height: 10px;
+    width: 70%;
+}
+
+.progress h5 {
+    position: absolute;
+    color: #eee;
+    top: -30px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.progress h5:nth-child(2) {
+    right: 0;
+    font-size: 17px;
+    font-weight: 300;
+    color: gray;
+}
+
+.progress-done {
+    background-color: #38d16a;
+    color: green;
+    border-radius: 20px;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.card {
+    width: 500px;
+    background: firebrick;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5)
+}
+
+.card h2 {
+    color: wheat;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-family: cursive;
+    border-bottom: 4px solid wheat;
+}
+
+ .forms {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+
+.forms h3 {
+    text-align: center;
+    color: wheat;
+}
+
+.forms form{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+form input {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+form textarea {
+    width: 100%;
+    margin-top: 15px;
+    height: 90px;
+    border-radius: 15px;
+}
+
+ .btnn button{
+    background: wheat;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    color: firebrick;
+    cursor: pointer;
+ }
+
+ input::placeholder,
+ textarea::placeholder {
+    color: firebrick;
+    padding: 0 20px;
+}
+
+textarea::placeholder {
+    padding: 10px;
+}
+
+.address {
+    color: white;
+    padding: 20px 0;
+    background-color: #000;
+}
+
+.address h5 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.address .icon {
+    padding: 10px;
+    text-align: center;
+}
+
+.address .color {
+    color: firebrick;
+}
+
+.address h6 {
+    color: firebrick;
+    text-align: center;
+    font-size: 23px;
+    padding: 10px;
+}
+
+.address p {
+    font-size: 15px;
+    padding: 0;
+    text-align: center;
+}
+
+.address .terms {
+    display: flex;
+    justify-content: center;
+}
+
+.address .social-icons {
+    text-align: center;
+}
